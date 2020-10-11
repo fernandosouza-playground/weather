@@ -13,21 +13,21 @@ import {
   WeatherLike,
   TemperatureRange,
   HighlightedTemperature,
-  Date
+  Date,
 } from "./styles";
 import { WeatherConditions } from "../types";
 
 export interface IWeatherDetails {
   forecastData: {
-    city: string,
-    dateTime: string,
-    weatherType: WeatherConditions,
+    city: string;
+    dateTime: string;
+    weatherType: WeatherConditions;
     temperature: {
-      min: number,
-      max: number,
-      current: number
-    }
-  }
+      min: number;
+      max: number;
+      current: number;
+    };
+  };
 }
 
 export const WeatherDetails: FC<IWeatherDetails> = ({ forecastData }) => {
