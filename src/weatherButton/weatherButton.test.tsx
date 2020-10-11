@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { WeatherButton } from "./index";
-import { Forecast } from "../types";
+import { WeatherConditions } from "../types";
 
 test('should render a formated celcius temperature', () => {
   const weather = {
     timestamp: "2017-02-16 15:00:00",
     temperature: 200,
-    forecast: Forecast.Sunny
+    forecast: WeatherConditions.Clear
   }
   const { getByText } = render(<WeatherButton weather={weather} />);
   const temperatureElement = getByText("-73°");;
@@ -18,7 +18,7 @@ test('should render a formated time in a 12 hour clock format', () => {
   const weather = {
     timestamp: "2017-02-16 15:00:00",
     temperature: 200,
-    forecast: Forecast.Sunny
+    forecast: WeatherConditions.Clear
   }
   const { getByText } = render(<WeatherButton weather={weather} />);
   const timeElement = getByText("3:00 PM");
@@ -29,7 +29,7 @@ test('should render a sun svg icon given a sunny forecast information', () => {
   const weather = {
     timestamp: "2017-02-16 15:00:00",
     temperature: 200,
-    forecast: Forecast.Sunny
+    forecast: WeatherConditions.Clear
   }
   const { getByText } = render(<WeatherButton weather={weather} />);
   const iconElement = getByText("weather-sun.svg");
@@ -40,7 +40,7 @@ test('should render a sun but cloudy svg icon given a cloudy forecast informatio
   const weather = {
     timestamp: "2017-02-16 15:00:00",
     temperature: 200,
-    forecast: Forecast.Cloudy
+    forecast: WeatherConditions.Clouds
   }
   const { getByText } = render(<WeatherButton weather={weather} />);
   const iconElement = getByText("weather-cloud.svg");

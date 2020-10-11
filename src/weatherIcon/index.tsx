@@ -1,5 +1,5 @@
 import React, { FC, HTMLAttributes } from "react";
-import { Forecast } from "../types";
+import { WeatherConditions } from "../types";
 import styled from "styled-components";
 import { ReactComponent as Suny } from "../weather-sun.svg";
 import { ReactComponent as Cloudy } from "../weather-cloud.svg";
@@ -7,7 +7,7 @@ import { ReactComponent as Cloudy } from "../weather-cloud.svg";
 type IWatherIconSizes = "small" | "large";
 
 interface IWatherIcon {
-  forecast: Forecast;
+  forecast: WeatherConditions;
   size?: IWatherIconSizes;
 }
 
@@ -25,7 +25,7 @@ export const WeatherIcon: FC<HTMLAttributes<any> & IWatherIcon> = ({
   size = "small",
   className,
 }) => {
-  return forecast === Forecast.Sunny ? (
+  return forecast === WeatherConditions.Clear ? (
     <SunyIcon size={size} className={className} />
   ) : (
     <CloudyIcon size={size} className={className} />

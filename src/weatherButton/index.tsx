@@ -1,7 +1,7 @@
 import React, { FC, MouseEvent } from "react";
 import styled from "styled-components";
 import { WeatherIcon } from "../weatherIcon";
-import { Forecast } from "../types";
+import { WeatherConditions } from "../types";
 import { Temperature } from "../temperature";
 
 const DateTime = styled.span`
@@ -42,7 +42,7 @@ interface IWeatherItemButton {
   weather: {
     timestamp: string;
     temperature: number;
-    forecast: Forecast;
+    forecast: WeatherConditions;
   };
 }
 
