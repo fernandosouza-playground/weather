@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { WeatherButton } from "./index";
-import { WeatherConditions } from "../types";
+import { WeatherConditions } from "../../types";
 
 test('should render a formated celcius temperature', () => {
   const weather = {

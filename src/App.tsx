@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import { WeatherButton } from "./weatherButton";
-import { WeatherConditions } from "./types";
+import React, { useEffect } from "react";
+import { WeatherButton } from "./components/weatherButton";
 import styled from "styled-components";
-import { WeatherDetails } from "./weatherDetails";
-
+import { WeatherDetails } from "./components/weatherDetails";
 import { useWeatherData } from "./weatherData/useWeatherData";
 
 const WeatherList = styled.div`

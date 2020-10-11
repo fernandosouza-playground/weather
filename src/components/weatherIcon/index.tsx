@@ -1,8 +1,8 @@
 import React, { FC, HTMLAttributes } from "react";
-import { WeatherConditions } from "../types";
+import { WeatherConditions } from "../../types";
 import styled from "styled-components";
-import { ReactComponent as Suny } from "../weather-sun.svg";
-import { ReactComponent as Cloudy } from "../weather-cloud.svg";
+import { ReactComponent as Suny } from "./weather-sun.svg";
+import { ReactComponent as Cloudy } from "./weather-cloud.svg";
 
 type IWatherIconSizes = "small" | "large";
 

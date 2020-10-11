@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { WeatherDetails } from "./index";
-import { WeatherConditions } from "../types";
+import { WeatherConditions } from "../../types";
 
 const weather = {
   city: "Berlin",

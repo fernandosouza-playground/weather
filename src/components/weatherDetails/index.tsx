@@ -15,7 +15,7 @@ import {
   HighlightedTemperature,
   Date,
 } from "./styles";
-import { WeatherConditions } from "../types";
+import { WeatherConditions } from "../../types";
 
 export interface IWeatherDetails {
   forecastData: {
