@@ -30,9 +30,14 @@ const WeatherItemButton = styled.button`
   cursor: pointer;
   padding: 3.2rem 4.6rem;
   border-radius: 6px;
+  border: 1px solid transparent;
+
+  &:focus, &:hover {
+    border-color: #51557A;
+  }
 
   &[aria-pressed="true"] {
-    background-color:#51557A
+    background-color:#51557A;
   }
 `;
 
