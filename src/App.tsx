@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { WeatherButton } from "./components/weatherButton";
-import styled from "styled-components";
-import { WeatherDetails } from "./components/weatherDetails";
-import { useWeatherData } from "./weatherData/useWeatherData";
+import React, { useEffect } from "react"
+import { WeatherButton } from "./components/weatherButton"
+import styled from "styled-components"
+import { WeatherDetails } from "./components/weatherDetails"
+import { useWeatherData } from "./weatherData/useWeatherData"
 
 const WeatherList = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ const WeatherList = styled.div`
   @media screen and (min-width: 768px) {
     padding-bottom: 9.6rem;
   }
-`;
+`
 
 function App() {
   const {
@@ -26,14 +26,14 @@ function App() {
     weatherData,
     selectedWeather,
     selectWeather,
-  } = useWeatherData();
+  } = useWeatherData()
 
   useEffect(() => {
-    fetch();
-  }, []);
+    fetch()
+  }, [])
 
   if (loading) {
-    return null;
+    return null
   }
 
   return (
@@ -62,12 +62,12 @@ function App() {
                 weather={item}
                 active={item.id === selectedWeather.id}
               />
-            );
+            )
           })}
         </WeatherList>
       </>
     )
-  );
+  )
 }
 
-export default App;
+export default App

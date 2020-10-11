@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import { createGlobalStyle } from "styled-components";
-import "./typography/typography.css";
-import { WeatherDataProvider } from "./weatherData/useWeatherData";
+import React from "react"
+import ReactDOM from "react-dom"
+import App from "./App"
+import * as serviceWorker from "./serviceWorker"
+import { createGlobalStyle } from "styled-components"
+import "./typography/typography.css"
+import { WeatherDataProvider } from "./weatherData/useWeatherData"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
-`;
+`
 
 ReactDOM.render(
   <React.StrictMode>
@@ -58,9 +58,9 @@ ReactDOM.render(
     </WeatherDataProvider>
   </React.StrictMode>,
   document.getElementById("root")
-);
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.unregister()
