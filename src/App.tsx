@@ -42,7 +42,7 @@ function App() {
       <WeatherDetails
         forecastData={{
           city: data.city.name,
-          dateTime: selectedWeather.timeStamp,
+          dateTime: selectedWeather.timestamp,
           weatherType: selectedWeather.weather.main,
           temperature: {
             min: selectedWeather.min,
