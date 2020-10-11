@@ -65,6 +65,7 @@ export const WeatherButton: FC<IWeatherItemButton> = ({
         {new Date(weather.timestamp).toLocaleTimeString([], {
           hour: "2-digit",
           minute: "2-digit",
+          hour12: false
         })}
       </DateTime>
       <WeatherIconStyled forecast={weather.forecast} />

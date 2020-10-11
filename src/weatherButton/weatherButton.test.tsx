@@ -14,14 +14,14 @@ test('should render a formated celcius temperature', () => {
   expect(temperatureElement).toBeInTheDocument();
 });
 
-test('should render a formated time in a 12 hour clock format', () => {
+test('should render a formated time in a 24 hour clock format', () => {
   const weather = {
     timestamp: "2017-02-16 15:00:00",
     temperature: 200,
     forecast: WeatherConditions.Clear
   }
   const { getByText } = render(<WeatherButton weather={weather} />);
-  const timeElement = getByText("3:00 PM");
+  const timeElement = getByText("15:00");
   expect(timeElement).toBeInTheDocument();
 });
 
