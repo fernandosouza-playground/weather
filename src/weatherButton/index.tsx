@@ -6,7 +6,7 @@ import { Temperature } from "../temperature";
 
 const DateTime = styled.span`
   color: #a8aabd;
-  font-size: 2.5rem;
+  font-size: 4.778rem;
 
   @media screen and (min-width: 768px) {
     font-size: 4.778rem;
@@ -15,7 +15,7 @@ const DateTime = styled.span`
 
 const StyledTemperature = styled(Temperature)`
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 4.778rem;
   color: #fff;
 
   @media screen and (min-width: 768px) {
