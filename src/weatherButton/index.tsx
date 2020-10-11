@@ -20,7 +20,6 @@ const StyledTemperature = styled(Temperature)`
 
   @media screen and (min-width: 768px) {
     font-size: 8.256rem;
-    line-height: 96px;
   }
 `;
 
@@ -39,6 +38,10 @@ const WeatherItemButton = styled.button`
   &[aria-pressed="true"] {
     background-color:#51557A;
   }
+`;
+
+const WeatherIconStyled = styled(WeatherIcon)`
+  margin: 3.2rem 0;
 `;
 
 interface IWeatherItemButton {
@@ -64,7 +67,7 @@ export const WeatherButton: FC<IWeatherItemButton> = ({
           minute: "2-digit",
         })}
       </DateTime>
-      <WeatherIcon forecast={weather.forecast} />
+      <WeatherIconStyled forecast={weather.forecast} />
       <StyledTemperature value={Math.round(weather.temperature)} />
     </WeatherItemButton>
   );
