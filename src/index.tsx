@@ -4,6 +4,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { createGlobalStyle } from "styled-components";
 import "./typography/typography.css";
+import { WeatherDataProvider } from "./weatherData/useWeatherData";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -52,7 +53,9 @@ const GlobalStyle = createGlobalStyle`
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-    <App />
+    <WeatherDataProvider>
+      <App />
+    </WeatherDataProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

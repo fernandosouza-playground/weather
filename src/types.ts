@@ -7,3 +7,13 @@ export enum WeatherConditions {
   Clouds = "Clouds",
   Atmosphere = "Atmosphere"
 }
+
+export interface WeatherData {
+  timestamp: string;
+  city: string;
+  temperature: number;
+  max: number;
+  min: number;
+  weather: WeatherConditions;
+  id: string;
+}
