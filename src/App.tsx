@@ -3,6 +3,7 @@ import { WeatherButton } from "./components/weatherButton"
 import styled from "styled-components"
 import { WeatherDetails } from "./components/weatherDetails"
 import { useWeatherData } from "./weatherData/useWeatherData"
+import { Loading } from "./components/loading"
 
 const WeatherList = styled.div`
   display: flex;
@@ -33,7 +34,7 @@ function App() {
   }, [])
 
   if (loading) {
-    return null
+    return <Loading />
   }
 
   return (
